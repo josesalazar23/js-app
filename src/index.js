@@ -1,23 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import "../src/styles/styles.css"
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 
 const App = () => {
 
   return (
-    <div >
-      <NavBar />
+    <div>
+      <div >
+        <NavBar />
+      </div>
 
-      <h2>nuevos productos</h2>
+      <div className=''>
+        <ItemListContainer nombre={"jose salazar"}/>
+      </div>
     </div>
   );
 };
-  
-  
+
 
 ReactDOM.render(<App />,document.getElementById('root'));
 
